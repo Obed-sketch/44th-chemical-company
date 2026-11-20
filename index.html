@@ -370,6 +370,7 @@
   .coc-field{font-size:15px; color:var(--ink-2); line-height:1.5}
   .coc-field b{color:var(--muted); font-family:var(--font-cond); letter-spacing:.1em; text-transform:uppercase; font-size:12px; margin-right:4px}
   .coc-field strong{color:var(--ink); font-weight:600}
+  .coc-note{font-size:13.5px; color:var(--muted); margin:7px 0 0; line-height:1.45}
   .coc-plt{background:var(--bg-2); border:1px solid var(--line-soft); border-radius:8px; padding:14px}
   .coc-plt h4{font-family:var(--font-cond); font-weight:700; letter-spacing:.14em; text-transform:uppercase; font-size:16px; margin:0 0 10px; text-align:center}
   .coc-plt .coc-card{background:var(--panel); margin-bottom:10px}
@@ -384,6 +385,22 @@
   .hist-line{border-top:1px dashed var(--line); padding-top:12px; display:grid; gap:8px}
   .hist-line span{font-family:var(--font-cond); letter-spacing:.12em; text-transform:uppercase; font-size:13px; color:var(--ink-2)}
   .hist-line span b{color:var(--gold-dim); margin-right:8px}
+
+  /* our brigade block */
+  .bde-block{margin-top:22px; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:30px 30px 26px}
+  .bde-title{font-family:var(--font-display); font-weight:400; font-size:clamp(22px,3vw,30px); text-transform:uppercase; margin:0 0 8px; line-height:1.15}
+  .bde-sub{color:var(--muted); margin:0 0 22px; font-size:16px}
+  .bde-mv{display:grid; grid-template-columns:1fr 1fr; gap:26px}
+  .bde-mv h4{font-family:var(--font-cond); font-weight:700; letter-spacing:.2em; text-transform:uppercase; font-size:14px; color:var(--gold); margin:0 0 8px}
+  .bde-mv p{color:var(--ink-2); margin:0; font-size:16px; line-height:1.6}
+  .bde-sisters{margin-top:26px; border-top:1px dashed var(--line); padding-top:20px}
+  .bde-sisters-head{font-family:var(--font-cond); font-weight:700; letter-spacing:.24em; text-transform:uppercase; font-size:13.5px; color:var(--gold-bright); margin:0 0 14px}
+  .sister-row{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+  .sister{background:var(--bg-2); border:1px solid var(--line-soft); border-radius:8px; padding:14px 16px}
+  .sister.ours{border-color:var(--gold-dim); background:rgba(201,162,39,.06)}
+  .sister .s-name{font-family:var(--font-cond); font-weight:700; font-size:17px; letter-spacing:.06em; text-transform:uppercase; margin:0 0 2px; color:var(--ink)}
+  .sister .s-loc{color:var(--muted); font-size:14px; margin:0}
+  .sister .s-tag{display:inline-block; margin-top:8px; font-family:var(--font-cond); font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:11px; color:var(--gold-bright); border:1px solid var(--gold-dim); border-radius:999px; padding:2px 9px}
 
   /* gallery placeholders */
   .gal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
@@ -444,7 +461,8 @@
     nav.links a{padding:12px 10px}
     .nav-inner{flex-wrap:wrap; padding:8px 0}
     .menu-btn{display:inline-flex; align-items:center}
-    .mv-grid,.mission-grid,.train-grid,.lead-grid,.plt-grid,.hist-grid,.tradition{grid-template-columns:1fr}
+    .mv-grid,.mission-grid,.train-grid,.lead-grid,.plt-grid,.hist-grid,.tradition,.bde-mv{grid-template-columns:1fr}
+    .sister-row{grid-template-columns:1fr 1fr}
     .tradition{padding:22px 20px 20px; gap:18px}
     .cr-who{flex-basis:96px}
     .nickname-band .wrap{gap:8px 14px}
@@ -461,6 +479,7 @@
   }
   @media (max-width: 430px){
     .gal-grid{grid-template-columns:1fr}
+    .sister-row{grid-template-columns:1fr}
     .plt-leaders{grid-template-columns:1fr}
     .soldier-grid{grid-template-columns:1fr 1fr; gap:10px}
     .soldier figcaption{flex-direction:column; gap:2px; padding:10px 12px}
@@ -500,6 +519,7 @@
       <a href="#gallery">Gallery</a>
       <a href="#history">History</a>
       <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -716,7 +736,7 @@
       <div class="sec-head reveal">
         <p class="kicker">Who We Answer To</p>
         <h2>Chain of Command</h2>
-        <p>From the platoons up through the company, battalion, and brigade — to the Commander in Chief. Every card is a placeholder with a photo space, a name field, and a rank field, ready to be filled in.</p>
+        <p>From the platoons up through the company, battalion, and brigade — to the Commander in Chief. Photos remain placeholders throughout; names and ranks are filled in as they are confirmed.</p>
       </div>
       <div class="coc">
         <div class="coc-level reveal">
@@ -728,8 +748,8 @@
         <div class="coc-level reveal">
           <p class="coc-label">48th Chemical Brigade</p>
           <div class="coc-row pair">
-            <div class="coc-card"><div class="coc-photo"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="34" r="17" stroke="#c9a227" stroke-width="3"/><path d="M18 88c3.5-19 16.5-28 32-28s28.5 9 32 28" stroke="#c9a227" stroke-width="3" stroke-linecap="round"/></svg><span>Photo</span></div><div><p class="coc-role">Brigade Commander</p><p class="coc-field"><b>Name</b> <strong>TBD</strong><br /><b>Rank</b> <strong>COL — TBD</strong></p></div></div>
-            <div class="coc-card"><div class="coc-photo"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="34" r="17" stroke="#7d9159" stroke-width="3"/><path d="M18 88c3.5-19 16.5-28 32-28s28.5 9 32 28" stroke="#7d9159" stroke-width="3" stroke-linecap="round"/></svg><span>Photo</span></div><div><p class="coc-role">Brigade Command Sergeant Major</p><p class="coc-field"><b>Name</b> <strong>TBD</strong><br /><b>Rank</b> <strong>CSM — TBD</strong></p></div></div>
+            <div class="coc-card"><div class="coc-photo"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="34" r="17" stroke="#c9a227" stroke-width="3"/><path d="M18 88c3.5-19 16.5-28 32-28s28.5 9 32 28" stroke="#c9a227" stroke-width="3" stroke-linecap="round"/></svg><span>Photo</span></div><div><p class="coc-role">Brigade Commander</p><p class="coc-field"><b>Name</b> <strong>COL Jacy Park</strong><br /><b>Rank</b> <strong>COL</strong></p><p class="coc-note">Previously commanded the 22d Chemical Battalion at Fort Bliss before taking brigade command.</p></div></div>
+            <div class="coc-card"><div class="coc-photo"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="34" r="17" stroke="#7d9159" stroke-width="3"/><path d="M18 88c3.5-19 16.5-28 32-28s28.5 9 32 28" stroke="#7d9159" stroke-width="3" stroke-linecap="round"/></svg><span>Photo</span></div><div><p class="coc-role">Brigade Command Sergeant Major</p><p class="coc-field"><b>Name</b> <strong>CSM Chylander Cummings</strong><br /><b>Rank</b> <strong>CSM</strong></p></div></div>
           </div>
         </div>
         <div class="coc-level reveal">
@@ -919,15 +939,16 @@
       <div class="sec-head reveal">
         <p class="kicker">Lineage &amp; Honors</p>
         <h2>Our History</h2>
-        <p>Placeholders for the histories of the brigade, the battalion, and the company — activation, lineage, campaigns, and honors to be added from official records.</p>
+        <p>The brigade's official lineage is in place below. Battalion and company histories remain placeholders — activation, lineage, campaigns, and honors to be added from official records.</p>
       </div>
       <div class="hist-grid">
         <article class="hist-card reveal">
           <span class="h-level">Brigade History</span>
           <h3>48th Chemical Brigade</h3>
-          <p>History placeholder — the brigade's activation, headquarters, mission evolution, campaigns, and honors will be written here.</p>
-          <div class="hist-line"><span><b>Activated</b> TBD</span><span><b>Headquarters</b> TBD</span><span><b>Honors</b> TBD</span></div>
-          <p style="margin-top:14px"><span class="tbd-chip">History — To Be Added</span></p>
+          <p>Constituted 12 March 1942 as Headquarters and Headquarters Company, 81st Chemical Battalion; activated 25 April 1942 at Fort D.A. Russell, Texas. The unit fought in World War II as the 81st Chemical Mortar Battalion, earning campaign credit for Normandy (with arrowhead), Northern France, Rhineland, Ardennes-Alsace, and Central Europe, and the Presidential Unit Citation (Army), Streamer embroidered NORMANDY.</p>
+          <p>Redesignated Headquarters and Headquarters Company, 48th Chemical Brigade on 14 January 2000 and activated 16 September 2007 at Fort Hood, Texas, under the 20th CBRNE Command — today the only active-duty chemical brigade in the Army, headquartered at Fort Hood (Fort Cavazos), Texas.</p>
+          <div class="hist-line"><span><b>Constituted</b> 12 March 1942</span><span><b>Activated</b> 16 September 2007</span><span><b>Headquarters</b> Fort Hood (Fort Cavazos), TX</span><span><b>Motto</b> &ldquo;Protect The Nation&rdquo;</span><span><b>Honors</b> Presidential Unit Citation (Army) — NORMANDY</span></div>
+          <p style="margin-top:14px"><b style="color:var(--ink-2)">Shoulder sleeve insignia:</b> a benzene ring with cobalt blue border, upright sword, red flames and droplets on gold. <b style="color:var(--ink-2)">Distinctive unit insignia:</b> a green dragon grasping a sword within a blue benzene ring with five gold stars.</p>
         </article>
         <article class="hist-card reveal">
           <span class="h-level">Battalion History</span>
@@ -943,6 +964,30 @@
           <div class="hist-line"><span><b>Activated</b> TBD</span><span><b>Station</b> Fort Bliss, TX</span><span><b>Honors</b> TBD</span></div>
           <p style="margin-top:14px"><span class="tbd-chip">History — To Be Added</span></p>
         </article>
+      </div>
+      <div class="bde-block reveal">
+        <p class="kicker">Our Brigade</p>
+        <h3 class="bde-title">48th Chemical Brigade — &ldquo;Protect The Nation&rdquo;</h3>
+        <p class="bde-sub">The brigade serves under the 20th CBRNE Command — the only active-duty chemical brigade in the Army, headquartered at Fort Hood (Fort Cavazos), Texas.</p>
+        <div class="bde-mv">
+          <div>
+            <h4>Brigade Mission</h4>
+            <p>48th Chemical Brigade provides command and control of two to six chemical battalions and other assigned or attached separate companies, and provides coordination for the use of needed chemical units within the supported area of operations.</p>
+          </div>
+          <div>
+            <h4>Brigade Vision</h4>
+            <p>48th Chemical Brigade will deliver cohesive teams who are physically fit, disciplined and experts in their field — &ldquo;Ready Now&rdquo; to conduct CBRNE operations in support of Combatant Commanders in defense of our Nation at home or abroad.</p>
+          </div>
+        </div>
+        <div class="bde-sisters">
+          <p class="bde-sisters-head">Our Brigade Family — Sister Battalions</p>
+          <div class="sister-row">
+            <div class="sister"><p class="s-name">2d Chemical Battalion</p><p class="s-loc">Fort Hood, Texas</p></div>
+            <div class="sister ours"><p class="s-name">22d Chemical Battalion</p><p class="s-loc">Fort Bliss, Texas</p><span class="s-tag">Our Battalion</span></div>
+            <div class="sister"><p class="s-name">83d Chemical Battalion</p><p class="s-loc">Fort Stewart, Georgia</p></div>
+            <div class="sister"><p class="s-name">110th Chemical Battalion</p><p class="s-loc">Joint Base Lewis-McChord, Washington</p></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -982,6 +1027,34 @@
         </article>
       </div>
       <p class="events-note">Soldiers: confirm all dates and report times through your chain of command — this page is updated as the training calendar is published.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">Reach the Company</p>
+        <h2>Contact Information</h2>
+        <p>Company contact details will be posted here once they are confirmed for publication.</p>
+      </div>
+      <div class="hist-grid">
+        <article class="train-card reveal">
+          <span class="t-num">CONTACT — 01</span>
+          <h3>Company Address</h3>
+          <p>TBD — the company address at Fort Bliss will be posted here.</p>
+        </article>
+        <article class="train-card reveal">
+          <span class="t-num">CONTACT — 02</span>
+          <h3>Staff Duty / CQ Phone</h3>
+          <p>TBD — the company staff duty / CQ phone number will be posted here.</p>
+        </article>
+        <article class="train-card reveal">
+          <span class="t-num">CONTACT — 03</span>
+          <h3>Battalion Staff Duty</h3>
+          <p>TBD — the 22d Chemical Battalion staff duty phone number will be posted here.</p>
+        </article>
+      </div>
     </div>
   </section>
 
