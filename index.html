@@ -246,16 +246,16 @@
   }
 
   /* leadership */
-  .lead-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px; max-width:880px}
-  .lead-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; display:grid; grid-template-columns:168px 1fr}
+  .lead-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+  .lead-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; display:grid; grid-template-columns:118px 1fr}
   .lead-photo{
     background:
       radial-gradient(120px 120px at 50% 38%, rgba(201,162,39,.16), transparent 70%),
       linear-gradient(180deg, var(--panel-2), #11160c);
     display:flex; align-items:center; justify-content:center; min-height:210px; border-right:1px solid var(--line-soft);
   }
-  .lead-photo svg{width:86px; height:86px; opacity:.85}
-  .lead-body{padding:24px 24px 22px}
+  .lead-photo svg{width:64px; height:64px; opacity:.85}
+  .lead-body{padding:22px 20px 20px}
   .lead-role{font-family:var(--font-cond); font-weight:700; letter-spacing:.24em; text-transform:uppercase; font-size:13px; color:var(--gold); margin:0 0 6px}
   .lead-name{font-family:var(--font-display); font-size:30px; margin:0 0 4px; letter-spacing:.06em}
   .lead-rank{font-family:var(--font-cond); font-size:16px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 14px}
@@ -352,7 +352,7 @@
   .mini-field b{color:var(--muted); font-family:var(--font-cond); letter-spacing:.12em; text-transform:uppercase; font-size:12px}
 
   /* chain of command */
-  .coc{max-width:920px; margin:0 auto; display:grid; gap:0}
+  .coc{max-width:1100px; margin:0 auto; display:grid; gap:0}
   .coc-level{position:relative; padding-bottom:30px}
   .coc-level::after{content:""; position:absolute; left:50%; bottom:4px; width:2px; height:22px; background:var(--gold-dim)}
   .coc-level:last-child::after{display:none}
@@ -361,6 +361,7 @@
   .coc-row{display:grid; gap:14px; justify-content:center}
   .coc-row.single{grid-template-columns:minmax(260px,420px)}
   .coc-row.pair{grid-template-columns:1fr 1fr}
+  .coc-row.trio{grid-template-columns:repeat(3,1fr)}
   .coc-row.quad{grid-template-columns:1fr 1fr}
   .coc-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:16px; display:grid; grid-template-columns:92px 1fr; gap:16px; align-items:center; text-align:left}
   .coc-card.solo{grid-template-columns:110px 1fr; padding:20px}
@@ -449,6 +450,8 @@
   @media (max-width: 980px){
     .hero-grid{grid-template-columns:1fr; gap:34px; padding:48px 0 44px}
     .patch-frame{order:-1; width:min(220px,60vw)}
+    .lead-grid{grid-template-columns:1fr 1fr}
+    .coc-row.trio{grid-template-columns:1fr 1fr}
     .soldier-grid{grid-template-columns:repeat(2,1fr)}
     .stats .wrap{grid-template-columns:repeat(2,1fr)}
     .stat:nth-child(3){border-left:none}
@@ -467,7 +470,7 @@
     .cr-who{flex-basis:96px}
     .nickname-band .wrap{gap:8px 14px}
     .gal-grid{grid-template-columns:1fr 1fr}
-    .coc-row.pair,.coc-row.quad{grid-template-columns:1fr}
+    .coc-row.pair,.coc-row.quad,.coc-row.trio{grid-template-columns:1fr}
     .coc-card{grid-template-columns:84px 1fr}
     .plt-leaders{grid-template-columns:1fr 1fr}
     .lead-card{grid-template-columns:128px 1fr}
@@ -681,6 +684,23 @@
             <p class="note">Photo placeholder above. Name and rank will be posted here once the command team is confirmed for publication.</p>
           </div>
         </article>
+        <article class="lead-card reveal">
+          <div class="lead-photo" aria-hidden="true">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
+              <circle cx="50" cy="34" r="17" stroke="#c9a227" stroke-width="2.5"/>
+              <path d="M18 88c3.5-19 16.5-28 32-28s28.5 9 32 28" stroke="#c9a227" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M50 58v14M43 65h14" stroke="#7d9159" stroke-width="2.5" stroke-linecap="round"/>
+              <rect x="44" y="59" width="12" height="12" transform="rotate(45 50 65)" stroke="#7d9159" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div class="lead-body">
+            <p class="lead-role">Company Warrant Officer</p>
+            <h3 class="lead-name">TBD</h3>
+            <p class="lead-rank">Name: TBD &nbsp;·&nbsp; Rank: TBD</p>
+            <span class="tbd-chip">Photo · Name · Rank — Placeholder</span>
+            <p class="note">The company's senior technical expert and technical advisor to the commander — the main technical brain of the company for CBRN operations. Photo placeholder above; name and rank will be posted once confirmed for publication.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -761,9 +781,10 @@
         </div>
         <div class="coc-level reveal">
           <p class="coc-label">44th Chemical Company</p>
-          <div class="coc-row pair">
+          <div class="coc-row trio">
             <div class="coc-card"><div class="coc-photo"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="34" r="17" stroke="#c9a227" stroke-width="3"/><path d="M18 88c3.5-19 16.5-28 32-28s28.5 9 32 28" stroke="#c9a227" stroke-width="3" stroke-linecap="round"/></svg><span>Photo</span></div><div><p class="coc-role">Company Commander</p><p class="coc-field"><b>Name</b> <strong>TBD</strong><br /><b>Rank</b> <strong>CPT — TBD</strong></p></div></div>
             <div class="coc-card"><div class="coc-photo"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="34" r="17" stroke="#7d9159" stroke-width="3"/><path d="M18 88c3.5-19 16.5-28 32-28s28.5 9 32 28" stroke="#7d9159" stroke-width="3" stroke-linecap="round"/></svg><span>Photo</span></div><div><p class="coc-role">First Sergeant</p><p class="coc-field"><b>Name</b> <strong>TBD</strong><br /><b>Rank</b> <strong>1SG — TBD</strong></p></div></div>
+            <div class="coc-card"><div class="coc-photo"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="34" r="17" stroke="#c9a227" stroke-width="3"/><path d="M18 88c3.5-19 16.5-28 32-28s28.5 9 32 28" stroke="#c9a227" stroke-width="3" stroke-linecap="round"/></svg><span>Photo</span></div><div><p class="coc-role">Company Warrant Officer</p><p class="coc-field"><b>Name</b> <strong>TBD</strong><br /><b>Rank</b> <strong>TBD</strong></p><p class="coc-note">The company's senior technical expert and technical advisor to the commander — the main technical brain of the company for CBRN operations.</p></div></div>
           </div>
         </div>
         <div class="coc-level reveal">
