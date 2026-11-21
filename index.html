@@ -414,6 +414,32 @@
   .photo-ph .ph-sub{font-size:13.5px; color:var(--muted); line-height:1.4}
   .photo-ph .ph-chip{font-family:var(--font-cond); font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:11px; color:var(--gold-bright); border:1px solid var(--gold-dim); border-radius:999px; padding:3px 10px}
 
+  /* social links */
+  .social-row{display:flex; flex-wrap:wrap; gap:10px}
+  .social-link{
+    display:inline-flex; align-items:center; gap:9px; min-height:44px; padding:10px 16px;
+    background:var(--bg-2); border:1px solid var(--line); border-radius:8px;
+    color:var(--ink-2); text-decoration:none; font-family:var(--font-cond);
+    font-weight:600; letter-spacing:.08em; font-size:15.5px; line-height:1.2;
+  }
+  .social-link:hover{border-color:var(--gold-dim); color:var(--gold-bright); background:var(--panel-2)}
+  .social-link:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
+  .social-link svg{width:18px; height:18px; flex:0 0 auto}
+  .social-link .handle{color:var(--muted); font-weight:500; letter-spacing:.04em}
+  .social-link:hover .handle{color:var(--gold-bright)}
+  .contact-social{
+    margin-top:22px; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 28px 24px;
+  }
+  .contact-social h3{font-family:var(--font-cond); font-weight:700; font-size:22px; letter-spacing:.08em; text-transform:uppercase; margin:0 0 6px}
+  .contact-social p{color:var(--muted); margin:0 0 18px; font-size:16px}
+  .foot-social{
+    width:100%; margin-top:26px; padding-top:22px; border-top:1px solid var(--line-soft);
+    display:flex; flex-wrap:wrap; gap:14px 22px; align-items:center; justify-content:space-between;
+  }
+  .foot-social-label{font-family:var(--font-cond); font-weight:700; letter-spacing:.24em; text-transform:uppercase; font-size:13px; color:var(--gold)}
+  .foot-social .social-link{background:var(--panel); font-size:14.5px; padding:9px 14px}
+
   /* footer */
   footer{background:#070905; border-top:1px solid var(--line); padding:46px 0 40px}
   .foot-grid{display:flex; flex-wrap:wrap; gap:28px; justify-content:space-between; align-items:flex-start}
@@ -1253,6 +1279,16 @@
           <p>TBD — the 22d Chemical Battalion staff duty phone number will be posted here.</p>
         </article>
       </div>
+      <div class="contact-social reveal">
+        <h3>Follow the Company</h3>
+        <p>Find the 44th Chemical Company on social media. Official handles will be posted here once confirmed — links below point to each platform until then.</p>
+        <div class="social-row" aria-label="44th Chemical Company social media links">
+          <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook — @TBD (opens facebook.com)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg><span>Facebook <span class="handle">— @TBD</span></span></a>
+          <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram — @TBD (opens instagram.com)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram <span class="handle">— @TBD</span></span></a>
+          <a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter (X) — @TBD (opens x.com)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 4h2.7l-6 6.8L21.5 20h-5.5l-4.3-5.6L6.7 20H4l6.4-7.3L3.7 4h5.6l3.9 5.1L17.8 4zm-1 14.3h1.5L8.5 5.6H6.9l9.9 12.7z"/></svg><span>Twitter (X) <span class="handle">— @TBD</span></span></a>
+          <a class="social-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube — @TBD (opens youtube.com)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8L15.5 12 10 15.2z"/></svg><span>YouTube <span class="handle">— @TBD</span></span></a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1283,6 +1319,15 @@
         <div>Defense CBRN Response Force</div>
       </div>
     </div>
+    <div class="foot-social">
+      <span class="foot-social-label">Follow Us</span>
+      <div class="social-row" aria-label="44th Chemical Company social media links">
+        <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook — @TBD (opens facebook.com)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg><span>Facebook <span class="handle">— @TBD</span></span></a>
+        <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram — @TBD (opens instagram.com)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram <span class="handle">— @TBD</span></span></a>
+        <a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter (X) — @TBD (opens x.com)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 4h2.7l-6 6.8L21.5 20h-5.5l-4.3-5.6L6.7 20H4l6.4-7.3L3.7 4h5.6l3.9 5.1L17.8 4zm-1 14.3h1.5L8.5 5.6H6.9l9.9 12.7z"/></svg><span>Twitter (X) <span class="handle">— @TBD</span></span></a>
+        <a class="social-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube — @TBD (opens youtube.com)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8L15.5 12 10 15.2z"/></svg><span>YouTube <span class="handle">— @TBD</span></span></a>
+      </div>
+    </div>
     <div class="foot-motto">
       <span class="fm">Dragons of Hell — &ldquo;Hell Fire!&rdquo;</span>
       <span>One Team — One Standard — No Fail</span>
@@ -1311,6 +1356,64 @@
   var gateSkip = document.getElementById('gateSkip');
   var gateTimers = [];
   var gateGone = false;
+  var INACTIVITY_LIMIT = 10 * 60 * 1000; // 10 minutes
+  var inactivityTimer = null;
+  var sessionActive = false;
+  var lastActivityReset = 0;
+
+  function clearInactivityTimer() {
+    if (inactivityTimer) { clearTimeout(inactivityTimer); inactivityTimer = null; }
+  }
+  function resetInactivityTimer() {
+    if (!sessionActive) return;
+    var now = Date.now();
+    // Throttle high-frequency events such as mousemove / scroll.
+    if (now - lastActivityReset < 1000 && inactivityTimer) return;
+    lastActivityReset = now;
+    clearInactivityTimer();
+    inactivityTimer = setTimeout(logoffToGate, INACTIVITY_LIMIT);
+  }
+  function startSessionTimer() {
+    sessionActive = true;
+    lastActivityReset = 0;
+    clearInactivityTimer();
+    inactivityTimer = setTimeout(logoffToGate, INACTIVITY_LIMIT);
+  }
+  function stopSessionTimer() {
+    sessionActive = false;
+    clearInactivityTimer();
+  }
+  function resetGateUI() {
+    gateClearTimers();
+    if (certDialog) certDialog.hidden = true;
+    if (pkiSteps) {
+      pkiSteps.hidden = true;
+      pkiSteps.querySelectorAll('li').forEach(function (li) {
+        li.className = li.getAttribute('data-step') === 'verified' ? 'verified-step' : '';
+      });
+    }
+    if (cacReqBtn) {
+      cacReqBtn.disabled = false;
+      if (cacReqBtn.lastChild) cacReqBtn.lastChild.textContent = ' Request CAC Authentication';
+    }
+  }
+  function logoffToGate() {
+    if (!cacGate || !gateGone) return;
+    stopSessionTimer();
+    // Close the lightbox if it happens to be open.
+    var lb = document.getElementById('lightbox');
+    if (lb) { lb.classList.remove('open'); document.body.style.overflow = ''; }
+    resetGateUI();
+    gateGone = false;
+    cacGate.style.display = '';
+    cacGate.classList.remove('gate-exit');
+    cacGate.removeAttribute('aria-hidden');
+    document.body.classList.add('gate-lock');
+    window.scrollTo(0, 0);
+    if (gateStatus) gateStatus.textContent = 'Session timed out after 10 minutes of inactivity. Please authenticate again.';
+    if (cacGate) cacGate.scrollTop = 0;
+    if (cacReqBtn) cacReqBtn.focus();
+  }
 
   function gateLater(fn, ms) { gateTimers.push(setTimeout(fn, ms)); }
   function gateClearTimers() {
@@ -1325,6 +1428,7 @@
     cacGate.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('gate-lock');
     setTimeout(function () { cacGate.style.display = 'none'; }, 700);
+    startSessionTimer();
     var brand = document.querySelector('.brand');
     if (brand) brand.focus();
   }
@@ -1362,6 +1466,13 @@
     });
     cacReqBtn.focus();
   }
+
+  // Inactivity logoff — any interaction resets the 10-minute timer.
+  ['mousemove', 'mousedown', 'click', 'keydown', 'keypress', 'touchstart', 'touchmove', 'wheel'].forEach(function (evt) {
+    document.addEventListener(evt, resetInactivityTimer, { passive: true });
+  });
+  window.addEventListener('scroll', resetInactivityTimer, { passive: true });
+  document.addEventListener('scroll', resetInactivityTimer, { passive: true });
 
   // Mobile menu
   var menuBtn = document.getElementById('menuBtn');
